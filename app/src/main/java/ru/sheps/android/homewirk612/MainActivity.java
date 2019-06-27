@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause: " + this);
-        textView = findViewById(R.id.textView);
         textView.append("\n" + "ОnPaused");
     }
 
@@ -56,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         Log.d(TAG, "onStop: " + this);
-        textView = findViewById(R.id.textView);
         textView.append("\n" + "ОnStop");
     }
 
@@ -70,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         Log.d(TAG, "onKeyDown:" +this);
-        TextView textView = findViewById(R.id.textView);
         textView.append("\n" + "onKeyDown");
         return super.onKeyDown(keyCode, event);
     }
@@ -102,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         Log.d(TAG, "onRestoreInstanceState: ");
         super.onRestoreInstanceState(savedInstanceState);
-        textView = findViewById(R.id.textView);
         savedText = savedInstanceState.getString(SAVED_KEY);
         textView.append("\n" + "onRestoreInstanceState");
     }
