@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart: " + this);
-        textView = findViewById(R.id.textView);
         textView.append("\n" + "ОnStart");
     }
 
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume: " + this);
-        textView = findViewById(R.id.textView);
         textView.append("\n" + "ОnResume");
     }
 
@@ -66,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy: " + this);
-        textView = findViewById(R.id.textView);
         textView.append("\n" + "ОnDestroy");
     }
 
@@ -81,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onKeyLongPress(int keyCode, KeyEvent event) {
         Log.d(TAG, "onKeyLongPress: " + this);
-        textView = findViewById(R.id.textView);
         textView.append("\n" + "onKeyLongPress");
         return super.onKeyLongPress(keyCode, event);
     }
@@ -89,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Log.d(TAG, "onBackPressed: " + this);
-        textView = findViewById(R.id.textView);
         textView.append("\n" + "onBackPressed");
         super.onBackPressed();
     }
@@ -97,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         Log.d(TAG, "onSaveInstanceState: " + this);
-        textView = findViewById(R.id.textView);
         textView.append("\n" + "onSaveInstanceState");
         String textForSave = textView.getText().toString();
         outState.putString(SAVED_KEY, textForSave);
